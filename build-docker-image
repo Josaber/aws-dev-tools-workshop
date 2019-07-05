@@ -1,0 +1,6 @@
+#!/bin/bash -e
+cd $(dirname $0)/
+
+IMAGE_NAME=helloworld
+
+docker build -t ${IMAGE_NAME} .
