@@ -1,7 +1,6 @@
 #!/bin/bash -e
 cd $(dirname $0)/
-
-IMAGE_NAME=helloworld
+source ./config
 
 docker run \
   -d \
