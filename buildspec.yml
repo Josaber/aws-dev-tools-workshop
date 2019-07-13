@@ -6,6 +6,8 @@ env:
 
 phases:
   install:
+    runtime-versions:
+      docker: 18
     commands:
       - echo install docker ...
       - apt-get docker -y
