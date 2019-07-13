@@ -13,3 +13,4 @@
 - Triggers and Notifications
   - CodeCommit: Lambda, SNS, ...
   - Github: Email
+- Add tags
