@@ -10,7 +10,6 @@ phases:
       docker: 18
     commands:
       - echo install docker ...
-      - apt-get docker -y
     finally:
       - echo finish to install docker ...
   pre_build:
