@@ -3,11 +3,12 @@ version: 0.2
 env:
   variables:
     ENV: "test"
+    DOCKER_VERSION: 18
 
 phases:
   install:
     runtime-versions:
-      docker: 18
+      docker: ${DOCKER_VERSION}
     commands:
       - echo install dependencies ...
     finally:
@@ -23,9 +24,8 @@ phases:
       - echo run unit test ...
       - echo run code style check ...
       - echo run dependencies check ...
-      - echo run integration test ...
-      - echo run e2e test ...
       - echo the env is ${ENV}
+      - echo the docker version is ${DOCKER_VERSION}
       - ./build-docker-image
       - echo login ecr
       - echo push image
