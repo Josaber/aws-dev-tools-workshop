@@ -1,0 +1,27 @@
+version: 0.2
+
+env:
+  variables:
+    ENV: "test"
+
+phases:
+  install:
+    commands:
+      - echo install docker ...
+      - apt-get docker -y
+    finally:
+      - echo finish to install docker ...
+  pre_build:
+    commands:
+      - echo pre-build ...
+    finally:
+      - echo finish pre-build
+  build:
+    commands:
+      - echo build docker image ...
+      - ./auto/build-docker-image
+    finally:
+      - echo finish to build docker image
+  post_build:
+    commands:
+      - echo post-build ...
