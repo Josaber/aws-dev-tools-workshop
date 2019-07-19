@@ -23,8 +23,10 @@ phases:
     commands:
       - echo run unit test ...
       - echo run code style check ...
+      - sleep 5
       - echo run dependencies check ...
       - echo the env is ${ENV}
+      - sleep 5
       - echo the docker version is ${DOCKER_VERSION}
       - ./build-docker-image
       - echo login ecr
