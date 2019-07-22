@@ -1,16 +1,33 @@
-### Try internal link
+## CodeCommit Setup
 
-[Internal File](./Try-Internal-Link.md)
+### Upload SSH public key to IAM
 
-<span style="color: red;">Failed in AWS CodeCommit, Succeed in Github without Style</span>
+### Config SSH
 
-### Comparation
+`~/.ssh/config`
 
-- 代码库内部文件链接
-- HTML元素支持
-- Triggers and Notifications
-  - CodeCommit: Lambda, SNS, ...
-  - Github: Email
-- Git tags
-  - Github release
-  - Codecommit tag
+```bash
+Host git-codecommit.*.amazonaws.com
+    User <YOUR-USERNAME-IN-IAM>
+    IdentityFile <YOUR-PRIVATE-SSH-KEY>
+```
+
+Example
+
+```bash
+Host git-codecommit.*.amazonaws.com
+    User A******************6
+    IdentityFile ~/.ssh/id_rsa
+```
+
+### Create Repo
+
+### Get & Push Repo
+
+```bash
+git clone git@github.com:Josaber/aws-dev-tools-workshop.git
+cd aws-dev-tools-workshop
+git remote remove origin
+git remote add origin <YOUR-GIT-REPO-ADDR>
+git push -u origin master
+```
