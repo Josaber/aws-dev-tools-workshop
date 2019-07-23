@@ -27,7 +27,6 @@ Host git-codecommit.*.amazonaws.com
 ```bash
 git clone git@github.com:Josaber/aws-dev-tools-workshop.git
 cd aws-dev-tools-workshop
-git remote remove origin
-git remote add origin <YOUR-GIT-REPO-ADDR>
+git remote set-url origin <YOUR-GIT-REPO-ADDR>
 git push -u origin master
 ```
