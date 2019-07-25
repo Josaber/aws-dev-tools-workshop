@@ -25,7 +25,7 @@ Host git-codecommit.*.amazonaws.com
 ### Get & Push Repo
 
 ```bash
-git clone git@github.com:Josaber/aws-dev-tools-workshop.git
+git clone https://github.com/Josaber/aws-dev-tools-workshop.git
 cd aws-dev-tools-workshop
 git remote set-url origin <YOUR-GIT-REPO-ADDR>
 git push -u origin master
