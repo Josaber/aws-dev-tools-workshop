@@ -1,1 +1,4 @@
 IMAGE_NAME=helloworld
+[default]
+aws_access_key_id = dsf234dfsf234sdf3242sdf
+aws_secret_access_key = sdf23482348d8234dsfds234dsf 
