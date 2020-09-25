@@ -1,0 +1,9 @@
+#!/bin/bash -e
+cd $(dirname $0)/
+source ./config
+
+docker run \
+  -d \
+  --rm \
+  -p 8080:80 \
+  ${IMAGE_NAME}

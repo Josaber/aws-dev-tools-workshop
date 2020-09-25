@@ -1,0 +1,32 @@
+version: 0.2
+
+env:
+  variables:
+    ENV: "test"
+    DOCKER_VERSION: 18
+
+phases:
+  install:
+    runtime-versions:
+      docker: ${DOCKER_VERSION}
+    commands:
+      - echo install dependencies ...
+    finally:
+      - echo finish to install dependencies ...
+  pre_build:
+    commands:
+      - docker pull nginx
+    finally:
+      - echo finish to pull nginx image ...
+  build:
+    commands:
+      - echo the env is ${ENV}
+      - echo the docker version is ${DOCKER_VERSION}
+      - ./build-docker-image
+      - echo login ecr
+      - echo push image
+    finally:
+      - echo finish to build
+  post_build:
+    commands:
+      - echo done, cleanup ...

@@ -1,0 +1,5 @@
+#!/bin/bash -e
+cd $(dirname $0)/
+source ./config
+
+docker build -t ${IMAGE_NAME} .
